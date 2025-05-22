@@ -1,0 +1,592 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #3498db;
+  text-shadow: none;
+}
+
+::selection {
+  background: #3498db;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #444;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+:root {
+  --primary-color: #1a2530;
+  --secondary-color: #3498db;
+  --text-color: #e0e0e0;
+  --light-bg: #2a2a2a;
+  --dark-bg: #1a1a1a;
+  --link-color: #4dabf7;
+  --link-hover: #74c0fc;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark-bg);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header Styles */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header .tagline {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* Navigation Styles */
+.main-nav {
+  margin-top: 1.5rem;
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.main-nav li {
+  display: inline-block;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.main-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .main-nav a {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* Intro Section */
+.intro {
+  background-color: #222222;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* App Sections */
+.app {
+  padding: 3rem 0;
+  border-bottom: 1px solid #333;
+}
+
+.app:nth-child(even) {
+  background-color: #252525;
+}
+
+.app h2 {
+  color: var(--text-color);
+  margin: 0 0 1.5rem 0;
+  font-size: 2rem;
+}
+
+/* App Grid Layout */
+.app-grid {
+  display: grid;
+  grid-template-columns: 256px 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Left Column - Logo with Blurred Background */
+.app-logo-column {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.app-logo {
+  position: relative;
+  z-index: 2;
+}
+
+.app-logo-image {
+  width: 256px;
+  height: 256px;
+  object-fit: cover;
+  display: block;
+}
+
+.app-logo-column::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px);
+  opacity: 0.7;
+  z-index: 1;
+  transform: scale(1.1);
+}
+
+.app-logo-column:nth-of-type(1)::before {
+  background-image: url('../img/fasttrack/app_logo.png');
+}
+
+#app2 .app-logo-column::before {
+  background-image: url('../img/app2-logo.jpg');
+}
+
+#app3 .app-logo-column::before {
+  background-image: url('../img/app3-logo.jpg');
+}
+
+/* Middle Column - Info */
+.app-info-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.app-description {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.app-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+/* Right Column - Screenshot Carousel */
+.app-screenshots-column {
+  position: relative;
+}
+
+.screenshot-carousel {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-slides {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 75%; /* Adjust based on your screenshot aspect ratio */
+  overflow: hidden;
+}
+
+.screenshot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0;
+  box-shadow: none;
+  display: none; /* Initially hidden, JS will show the active one */
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 10px;
+}
+
+.carousel-prev,
+.carousel-next {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.github-link, .store-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--link-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.github-link:hover, .store-link:hover {
+  background-color: var(--link-hover);
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--dark-bg);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+footer a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .app-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .app-logo-column {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .app-info-column {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .app-screenshots-column {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .app-logo-column {
+    grid-column: 1;
+    grid-row: 1;
+    max-width: 256px;
+    margin: 0 auto;
+  }
+
+  .app-info-column {
+    grid-column: 1;
+    grid-row: 2;
+    text-align: center;
+  }
+
+  .app-screenshots-column {
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: 1.5rem;
+  }
+
+  .app h2 {
+    text-align: center;
+  }
+
+  .app-links {
+    justify-content: center;
+  }
+
+  .github-link, .store-link {
+    width: 80%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
