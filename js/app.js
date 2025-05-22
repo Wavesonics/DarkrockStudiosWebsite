@@ -1,5 +1,24 @@
 // Smooth scrolling for navigation
 document.addEventListener('DOMContentLoaded', function() {
+  // Add indentation after line breaks within paragraphs
+  function indentAfterLineBreaks() {
+    // Find all paragraphs
+    const paragraphs = document.querySelectorAll('p');
+
+    paragraphs.forEach(paragraph => {
+      // Get the HTML content of the paragraph
+      let content = paragraph.innerHTML;
+
+      // Replace <br /> tags with a special span that has indentation
+      content = content.replace(/<br\s*\/?>/gi, '<br /><span class="line-break-indent"></span>');
+
+      // Update the paragraph content
+      paragraph.innerHTML = content;
+    });
+  }
+
+  // Call the function to indent after line breaks
+  indentAfterLineBreaks();
   // Add smooth scrolling to all links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

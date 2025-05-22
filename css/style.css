@@ -95,6 +95,27 @@ body {
 	background-color: var(--dark-bg);
 }
 
+p {
+	text-indent: 2em;
+}
+
+/* Indent text after line breaks */
+.line-break-indent {
+	display: inline-block;
+	padding-left: 2em;
+	text-indent: 0;
+}
+
+/* Don't indent tag lines */
+p.tag-line {
+	text-indent: 0;
+}
+
+/* Don't indent paragraphs in specific contexts */
+.app-description p:nth-child(2) {
+	text-indent: 0; /* This targets the website link paragraphs */
+}
+
 a {
 	color: var(--link-color);
 	text-decoration: none;
@@ -194,6 +215,10 @@ header .tagline {
 
 .main-nav a[href="#appSnapSafe"]::after {
 	background-color: var(--snapsafe-color);
+}
+
+.main-nav a[href="#libraries"]::after {
+	background-color: var(--secondary-color);
 }
 
 .main-nav a:hover {
@@ -472,6 +497,126 @@ header .tagline {
 	background-image: url('../img/icons/logo-fdroid.svg');
 }
 
+/* Libraries Section */
+.libraries {
+	padding: 3rem 0 5rem 0;
+	background-color: #252525;
+	border-bottom: 1px solid #333;
+	position: relative;
+}
+
+.libraries::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 4px;
+	background-color: var(--secondary-color);
+}
+
+.libraries h2 {
+	color: var(--text-color);
+	margin: 0 0 2rem 0;
+	font-size: 2rem;
+	text-align: center;
+}
+
+.libraries-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 2rem;
+	row-gap: 4rem; /* Increased vertical gap to prevent overlap when wrapping */
+}
+
+.library-entry {
+	background-color: var(--light-bg);
+	border-radius: 8px;
+	padding: 1.5rem;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.library-entry:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.library-github-link {
+	display: flex;
+	align-items: center;
+	color: var(--text-color);
+	text-decoration: none;
+	margin-bottom: 1rem;
+	position: relative;
+	padding-left: 35px;
+}
+
+.library-github-link::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 24px;
+	height: 24px;
+	background-image: url('../img/icons/logo-github.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.library-title {
+	font-size: 1.3rem;
+	font-weight: bold;
+	margin: 0;
+}
+
+.library-description {
+	margin: 0.5rem 0 1rem 0;
+	flex-grow: 1;
+}
+
+.license-chip {
+	display: inline-block;
+	background-color: #2a9d8f;
+	color: white;
+	padding: 0.3rem 0.8rem;
+	border-radius: 20px;
+	font-size: 0.8rem;
+	font-weight: bold;
+	align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+	.libraries-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.library-entry {
+		text-align: left;
+	}
+
+	.library-github-link {
+		justify-content: center;
+		padding-left: 0;
+		padding-top: 30px;
+	}
+
+	.library-github-link::before {
+		left: 50%;
+		top: 0;
+		transform: translateX(-50%);
+	}
+
+	.license-chip {
+		align-self: flex-start;
+	}
+}
+
 /* Footer Styles */
 footer {
 	background-color: var(--dark-bg);
@@ -539,6 +684,10 @@ footer a:hover {
 		grid-column: 1;
 		grid-row: 2;
 		text-align: center;
+	}
+
+	.app-description {
+		text-align: left;
 	}
 
 	.app-screenshots-column {
