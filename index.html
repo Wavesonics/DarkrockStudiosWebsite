@@ -9,6 +9,11 @@
 	<meta name="description"
 		  content="Dark Rock Studios creates free and open source applications for various platforms.">
 
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+
 	<meta property="og:title" content="Dark Rock Studios">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://darkrock.studio">
@@ -26,13 +31,14 @@
 <body>
 <header>
 	<div class="container">
+		<img src="img/darkrockstudios_logo.png" alt="Dark Rock Studios Logo" class="header-logo">
 		<h1>Dark Rock Studios</h1>
-		<p class="tagline">Creating Free and Open Source Applications</p>
+		<p class="tagline"><em>Creating Free and Open Source Applications</em></p>
 		<nav class="main-nav">
 			<ul>
-				<li><a href="#app1">App 1</a></li>
-				<li><a href="#app2">App 2</a></li>
-				<li><a href="#app3">App 3</a></li>
+				<li><a href="#appFastTrack">Fast Track</a></li>
+				<li><a href="#appHammer">Hammer</a></li>
+				<li><a href="#appSnapSafe">Snap Safe</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -46,8 +52,8 @@
 		</div>
 	</section>
 
-	<!-- App 1 -->
-	<section class="app" id="app1">
+	<!-- App: FastTrack -->
+	<section class="app" id="appFastTrack">
 		<div class="container">
 			<div class="app-grid">
 				<!-- Left column: Logo with blurred background -->
@@ -59,14 +65,21 @@
 
 				<!-- Middle column: Title, description, and links -->
 				<div class="app-info-column">
-					<h2>App 1 Name</h2>
+					<h2>Fast Track</h2>
 					<div class="app-description">
-						<p>Detailed description of App 1. Explain what it does, who it's for, and why it's useful. This is where
-							you can highlight the key features and benefits of the application.</p>
+						<p class="tag-line">Track what your body is doing while fasting</p>
+						<p>Simple, Free, Open Source.
+
+							No ads, no in-app purchases, no permissions.
+
+							Just tell the app when you start your fast, and check back in to see what your body is doing
+							during your fast.</p>
 					</div>
 					<div class="app-links">
-						<a href="https://github.com/darkrockstudios/app1" class="github-link">View on GitHub</a>
-						<a href="#" class="store-link">Download from App Store</a>
+						<a href="https://github.com/Wavesonics/FastTrack" class="github-link">GitHub</a>
+						<a href="https://play.google.com/store/apps/details?id=com.darkrockstudios.apps.fasttrack"
+						   class="store-link">Google Play</a>
+						<a href="https://f-droid.org/en/packages/com.darkrockstudios.apps.fasttrack/" class="fdroid-link">F-Droid</a>
 					</div>
 				</div>
 
@@ -74,8 +87,9 @@
 				<div class="app-screenshots-column">
 					<div class="screenshot-carousel">
 						<div class="carousel-slides">
-							<img src="img/app1-screenshot1.jpg" alt="App 1 Screenshot 1" class="screenshot">
-							<img src="img/app1-screenshot2.jpg" alt="App 1 Screenshot 2" class="screenshot">
+							<img src="img/fasttrack/screenshot_00.jpg" alt="FastTrack Screenshot 1" class="screenshot">
+							<img src="img/fasttrack/screenshot_01.jpg" alt="FastTrack Screenshot 2" class="screenshot">
+							<img src="img/fasttrack/screenshot_02.jpg" alt="FastTrack Screenshot 3" class="screenshot">
 						</div>
 						<div class="carousel-controls">
 							<button class="carousel-prev" aria-label="Previous screenshot">&#10094;</button>
@@ -87,27 +101,30 @@
 		</div>
 	</section>
 
-	<!-- App 2 -->
-	<section class="app" id="app2">
+	<!-- App Hammer -->
+	<section class="app" id="appHammer">
 		<div class="container">
 			<div class="app-grid">
 				<!-- Left column: Logo with blurred background -->
 				<div class="app-logo-column">
 					<div class="app-logo">
-						<img src="img/app2-logo.jpg" alt="App 2 Logo" class="app-logo-image">
+						<img src="img/hammer/app_logo.png" alt="Hammer Logo" class="app-logo-image">
 					</div>
 				</div>
 
 				<!-- Middle column: Title, description, and links -->
 				<div class="app-info-column">
-					<h2>App 2 Name</h2>
+					<h2>Hammer</h2>
 					<div class="app-description">
-						<p>Detailed description of App 2. Explain what it does, who it's for, and why it's useful. This is where
-							you can highlight the key features and benefits of the application.</p>
+						<p class="tag-line">A simple tool for building stories.</p>
+						<p>The Hammer Editor is a versatile and user-friendly tool for building stories, available across multiple platforms including phone, tablet, and desktop.
+							<br/>Designed for offline use, it stores your data in human-readable files, giving you full control over your content. Enjoy seamless, intelligent syncing between devices, allowing you to work on your stories from anywhere without concern for overwriting.
+							<br />With adaptable light and dark modes and responsive design, Hammer ensures a comfortable and productive writing experience.</p>
 					</div>
 					<div class="app-links">
-						<a href="https://github.com/darkrockstudios/app2" class="github-link">View on GitHub</a>
-						<a href="#" class="store-link">Download from App Store</a>
+						<a href="https://github.com/darkrockstudios/app2" class="github-link">GitHub</a>
+						<a href="#" class="store-link">Google Play</a>
+						<a href="https://f-droid.org/en/packages/com.darkrockstudios.apps.hammer/" class="fdroid-link">F-Droid</a>
 					</div>
 				</div>
 
@@ -115,8 +132,10 @@
 				<div class="app-screenshots-column">
 					<div class="screenshot-carousel">
 						<div class="carousel-slides">
-							<img src="img/app2-screenshot1.jpg" alt="App 2 Screenshot 1" class="screenshot">
-							<img src="img/app2-screenshot2.jpg" alt="App 2 Screenshot 2" class="screenshot">
+							<img src="img/hammer/screenshot_00.jpg" alt="Hammer Screenshot 1" class="screenshot">
+							<img src="img/hammer/screenshot_01.jpg" alt="Hammer Screenshot 2" class="screenshot">
+							<img src="img/hammer/screenshot_02.jpg" alt="Hammer Screenshot 3" class="screenshot">
+							<img src="img/hammer/screenshot_03.jpg" alt="Hammer Screenshot 4" class="screenshot">
 						</div>
 						<div class="carousel-controls">
 							<button class="carousel-prev" aria-label="Previous screenshot">&#10094;</button>
@@ -128,27 +147,29 @@
 		</div>
 	</section>
 
-	<!-- App 3 -->
-	<section class="app" id="app3">
+	<!-- App SnapSafe -->
+	<section class="app" id="appSnapSafe">
 		<div class="container">
 			<div class="app-grid">
 				<!-- Left column: Logo with blurred background -->
 				<div class="app-logo-column">
 					<div class="app-logo">
-						<img src="img/app3-logo.jpg" alt="App 3 Logo" class="app-logo-image">
+						<img src="img/snapsafe/app_logo.png" alt="SnapSafe Logo" class="app-logo-image">
 					</div>
 				</div>
 
 				<!-- Middle column: Title, description, and links -->
 				<div class="app-info-column">
-					<h2>App 3 Name</h2>
+					<h2>SnapSafe</h2>
 					<div class="app-description">
-						<p>Detailed description of App 3. Explain what it does, who it's for, and why it's useful. This is where
-							you can highlight the key features and benefits of the application.</p>
+						<p class="tag-line">Snap pics of anything, safely.</p>
+						<p><a href="https://snapsafe.org/">snapsafe.org</a></p>
+						<p>We capture photos locally, encrypt everything in private storage, let YOU decide if GPS tags are added, and strip out tell‑tale metadata automatically.</p>
 					</div>
 					<div class="app-links">
-						<a href="https://github.com/darkrockstudios/app3" class="github-link">View on GitHub</a>
-						<a href="#" class="store-link">Download from App Store</a>
+						<a href="https://github.com/darkrockstudios/app3" class="github-link">GitHub</a>
+						<a href="#" class="store-link">Google Play</a>
+						<a href="https://f-droid.org/en/packages/com.darkrockstudios.apps.snapsafe/" class="fdroid-link">F-Droid</a>
 					</div>
 				</div>
 
@@ -156,8 +177,11 @@
 				<div class="app-screenshots-column">
 					<div class="screenshot-carousel">
 						<div class="carousel-slides">
-							<img src="img/app3-screenshot1.jpg" alt="App 3 Screenshot 1" class="screenshot">
-							<img src="img/app3-screenshot2.jpg" alt="App 3 Screenshot 2" class="screenshot">
+							<img src="img/snapsafe/screenshot_00.jpg" alt="SnapSafe Screenshot 1" class="screenshot">
+							<img src="img/snapsafe/screenshot_01.jpg" alt="SnapSafe Screenshot 2" class="screenshot">
+							<img src="img/snapsafe/screenshot_02.jpg" alt="SnapSafe Screenshot 3" class="screenshot">
+							<img src="img/snapsafe/screenshot_03.jpg" alt="SnapSafe Screenshot 4" class="screenshot">
+							<img src="img/snapsafe/screenshot_04.jpg" alt="SnapSafe Screenshot 5" class="screenshot">
 						</div>
 						<div class="carousel-controls">
 							<button class="carousel-prev" aria-label="Previous screenshot">&#10094;</button>
@@ -172,8 +196,7 @@
 
 <footer>
 	<div class="container">
-		<p>&copy; 2023 Dark Rock Studios. All applications are open source under MIT license.</p>
-		<p><a href="https://github.com/darkrockstudios">GitHub</a></p>
+		<p>&copy; 2025 Dark Rock Studios. All applications are open source under MIT license.</p>
 	</div>
 </footer>
 
