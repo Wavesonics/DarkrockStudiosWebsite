@@ -174,7 +174,7 @@ header .tagline {
 .main-nav a::after {
 	content: '';
 	position: absolute;
-	width: 30%; /* Always show a small underline */
+	width: 30%;
 	height: 3px;
 	bottom: 0;
 	left: 50%;
@@ -436,11 +436,12 @@ header .tagline {
 	font-weight: bold;
 	transition: background-color 0.3s ease;
 	position: relative;
-	padding-left: 40px; /* Make space for the icon */
+	padding-left: 40px;
 }
 
 .github-link:hover, .store-link:hover, .fdroid-link:hover {
 	background-color: var(--link-hover);
+	color: #000000;
 }
 
 .github-link::before, .store-link::before, .fdroid-link::before {
