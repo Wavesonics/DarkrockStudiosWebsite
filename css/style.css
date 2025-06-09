@@ -84,7 +84,7 @@ textarea {
 	--fasttrack-color: #7E14DC;
 	--hammer-color: #FF4B05;
 	--snapsafe-color: #3DDC84;
-	--support-color: #F96854; /* Patreon color */
+	--support-color: #8d271c;
 }
 
 body {
@@ -368,12 +368,27 @@ header .tagline {
 	background-image: url('../img/snapsafe/app_logo.png');
 }
 
+/* Support Dev section gradient background */
+#supportDev .app-logo-column::before {
+	background-image: none;
+	background: linear-gradient(135deg, var(--support-color), #914f00); /* Gradient from Patreon color to orange */
+	opacity: 0.9;
+}
+
 /* Middle Column - Info */
 .app-info-column {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	height: 100%;
+}
+
+.support-info-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	grid-column: 2 / span 2;
 }
 
 .app-description {
