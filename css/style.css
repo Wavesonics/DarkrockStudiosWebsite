@@ -591,6 +591,37 @@ header .tagline {
 	align-self: flex-start;
 }
 
+/* Library Support Card */
+.library-support {
+	background-color: var(--light-bg);
+	border-radius: 8px;
+	padding: 1.5rem;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	height: 100%;
+	color: var(--text-color);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.library-support:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+	color: var(--text-color);
+	text-decoration: none;
+}
+
+.library-support h3 {
+	margin-top: 0;
+	margin-bottom: 1rem;
+	font-size: 1.3rem;
+	color: var(--text-color);
+}
+
 @media (max-width: 768px) {
 	.libraries-grid {
 		grid-template-columns: 1fr;
@@ -614,6 +645,15 @@ header .tagline {
 
 	.license-chip {
 		align-self: flex-start;
+	}
+
+	.library-support {
+		/* Keep centered alignment on mobile */
+		text-align: center;
+	}
+
+	.library-support iframe {
+		margin: 0 auto;
 	}
 }
 
