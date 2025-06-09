@@ -84,6 +84,7 @@ textarea {
 	--fasttrack-color: #7E14DC;
 	--hammer-color: #FF4B05;
 	--snapsafe-color: #3DDC84;
+	--support-color: #F96854; /* Patreon color */
 }
 
 body {
@@ -217,6 +218,10 @@ header .tagline {
 	background-color: var(--snapsafe-color);
 }
 
+.main-nav a[href="#supportDev"]::after {
+	background-color: var(--support-color);
+}
+
 .main-nav a[href="#libraries"]::after {
 	background-color: var(--secondary-color);
 }
@@ -291,6 +296,10 @@ header .tagline {
 
 #appSnapSafe::before {
 	background-color: var(--snapsafe-color);
+}
+
+#supportDev::before {
+	background-color: var(--support-color);
 }
 
 .app h2 {
@@ -451,7 +460,7 @@ header .tagline {
 	background-color: rgba(0, 0, 0, 0.8);
 }
 
-.github-link, .store-link, .fdroid-link {
+.github-link, .store-link, .fdroid-link, .patreon-link {
 	display: inline-block;
 	padding: 10px 20px;
 	background-color: var(--link-color);
@@ -464,12 +473,12 @@ header .tagline {
 	padding-left: 40px;
 }
 
-.github-link:hover, .store-link:hover, .fdroid-link:hover {
+.github-link:hover, .store-link:hover, .fdroid-link:hover, .patreon-link:hover {
 	background-color: var(--link-hover);
 	color: #000000;
 }
 
-.github-link::before, .store-link::before, .fdroid-link::before {
+.github-link::before, .store-link::before, .fdroid-link::before, .patreon-link::before {
 	content: '';
 	position: absolute;
 	left: 10px;
@@ -495,6 +504,18 @@ header .tagline {
 
 .fdroid-link::before {
 	background-image: url('../img/icons/logo-fdroid.svg');
+}
+
+.patreon-link::before {
+	background-image: url('../img/icons/logo-patreon.png');
+}
+
+.support-emoji {
+	font-size: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
 }
 
 /* Libraries Section */
@@ -744,7 +765,7 @@ footer a:hover {
 		justify-content: center;
 	}
 
-	.github-link, .store-link .fdroid-link {
+	.github-link, .store-link, .fdroid-link, .patreon-link {
 		width: 80%;
 		text-align: center;
 		margin-bottom: 10px;
